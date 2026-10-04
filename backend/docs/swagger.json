@@ -1,0 +1,55 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "EVOS EV Fleet Cost Intelligence Platform API",
+    "description": "Production REST API for commercial EV fleet cost intelligence, anomaly radar, and decision engine.",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "/api/v1",
+      "description": "Primary API Server"
+    }
+  ],
+  "paths": {
+    "/auth/login": {
+      "post": {
+        "summary": "Authenticate operator session",
+        "responses": {
+          "200": { "description": "Authenticated session token and profile" },
+          "401": { "description": "Invalid credentials" }
+        }
+      }
+    },
+    "/vehicles": {
+      "get": {
+        "summary": "List company fleet vehicles",
+        "responses": {
+          "200": { "description": "Array of vehicles" }
+        }
+      },
+      "post": {
+        "summary": "Register a new EV fleet vehicle",
+        "responses": {
+          "201": { "description": "Vehicle registered" }
+        }
+      }
+    },
+    "/trips": {
+      "post": {
+        "summary": "Dispatch trip and calculate true operating cost",
+        "responses": {
+          "201": { "description": "Trip logged with cost engine calculations" }
+        }
+      }
+    },
+    "/dashboard/summary": {
+      "get": {
+        "summary": "Authoritative financial aggregation of fleet expenditure",
+        "responses": {
+          "200": { "description": "Summary metrics" }
+        }
+      }
+    }
+  }
+}

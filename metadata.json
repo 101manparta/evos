@@ -1,0 +1,6 @@
+{
+  "name": "EVOS - EV Fleet Cost Intelligence",
+  "description": "EV fleet cost intelligence platform to uncover operational leaks, analyze true cost per kilometer, and optimize electric fleet performance.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
