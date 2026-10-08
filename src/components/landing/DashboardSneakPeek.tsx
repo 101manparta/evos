@@ -1,6 +1,7 @@
 import React from 'react';
 import { ArrowRight, LayoutDashboard, CheckCircle2, ShieldCheck, Zap } from 'lucide-react';
 import { GlassCard } from '../ui/GlassCard';
+import { EvosLogo } from '../brand/EvosLogo';
 
 interface DashboardSneakPeekProps {
   onLaunchDemo: () => void;
@@ -62,9 +63,7 @@ export const DashboardSneakPeek: React.FC<DashboardSneakPeekProps> = ({ onLaunch
               {/* Floating Overlay Card inside frame */}
               <div className="absolute bottom-6 left-6 right-6 flex flex-col sm:flex-row items-center justify-between gap-4 p-5 rounded-2xl bg-[#070A0F]/85 backdrop-blur-xl border border-white/[0.1]">
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 shrink-0">
-                    <Zap className="w-5 h-5" />
-                  </div>
+                  <EvosLogo variant="icon" size="sm" animated={true} />
                   <div>
                     <h4 className="text-sm font-bold text-white">Bali Mobility Corp Fleet (20 EVs)</h4>
                     <p className="text-xs text-slate-400">18 In Service · 2 Fast Charging · 0 Critical Safety Hazards</p>

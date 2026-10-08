@@ -21,6 +21,7 @@ import {
   LogOut,
 } from 'lucide-react';
 import { useAuth } from '../../context/AuthContext';
+import { EvosLogo } from '../brand/EvosLogo';
 
 interface DashboardSidebarProps {
   currentPath: string;
@@ -69,25 +70,18 @@ export const DashboardSidebar: React.FC<DashboardSidebarProps> = ({
         {!collapsed ? (
           <button
             onClick={() => onNavigate('/')}
-            className="flex items-center gap-2 group cursor-pointer text-left"
+            className="flex items-center cursor-pointer text-left focus:outline-none"
+            aria-label="Back to EVOS Overview"
           >
-            <div className="w-8 h-8 rounded-lg bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 group-hover:scale-105 transition-transform">
-              <Zap className="w-4 h-4" />
-            </div>
-            <div>
-              <span className="font-['Syne',sans-serif] text-lg font-bold tracking-tight text-white block leading-none">
-                EVOS
-              </span>
-              <span className="text-[10px] text-slate-400 tracking-wider">FLEET COST INTEL</span>
-            </div>
+            <EvosLogo size="sm" withSubtext={true} animated={true} />
           </button>
         ) : (
           <button
             onClick={() => onNavigate('/')}
-            className="mx-auto w-10 h-10 rounded-lg bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400"
+            className="mx-auto flex items-center justify-center cursor-pointer focus:outline-none"
             title="EVOS Home"
           >
-            <Zap className="w-5 h-5" />
+            <EvosLogo variant="icon" size="sm" animated={true} />
           </button>
         )}
 

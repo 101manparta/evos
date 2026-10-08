@@ -43,6 +43,7 @@ import { PricingPage } from './components/pages/PricingPage';
 
 import { TripRecord } from './types';
 import { Zap } from 'lucide-react';
+import { EvosLogo } from './components/brand/EvosLogo';
 
 function AppContent() {
   const { isAuthenticated, isLoading, logout } = useAuth();
@@ -114,12 +115,11 @@ function AppContent() {
 
   if (isLoading) {
     return (
-      <div className="min-h-screen bg-[#050608] flex flex-col items-center justify-center space-y-4">
-        <div className="w-12 h-12 rounded-2xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 animate-pulse">
-          <Zap className="w-6 h-6" />
-        </div>
-        <div className="font-['Syne',sans-serif] text-xs font-semibold tracking-widest text-slate-400 uppercase">
-          Verifying EVOS Intelligence Session...
+      <div className="min-h-screen bg-[#050608] flex flex-col items-center justify-center p-6 space-y-6">
+        <EvosLogo variant="badge" size="xl" glow="high" withSubtext={true} animated={true} />
+        <div className="flex items-center gap-2 text-xs font-mono text-emerald-400/80 tracking-wider">
+          <span className="w-2 h-2 rounded-full bg-emerald-400 animate-ping" />
+          <span>INITIALIZING FLEET INTELLIGENCE...</span>
         </div>
       </div>
     );

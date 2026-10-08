@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { ArrowRight, Menu, X } from 'lucide-react';
+import { EvosLogo } from '../brand/EvosLogo';
 
 interface NavbarProps {
   currentPath: string;
@@ -56,24 +57,13 @@ export const Navbar: React.FC<NavbarProps> = ({ currentPath, onNavigate }) => {
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 md:px-10 flex items-center justify-between">
-        {/* Brand: EVOS with lightning emblem */}
+        {/* Brand: EVOS Animated Emblem & Wordmark */}
         <button
           onClick={() => handleLinkClick('/')}
-          className="flex items-center gap-2.5 cursor-pointer focus:outline-none group text-left"
+          className="cursor-pointer focus:outline-none text-left"
+          aria-label="EVOS Fleet Cost Intelligence"
         >
-          {/* Custom geometric lightning icon */}
-          <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-emerald-400 to-teal-400 flex items-center justify-center shadow-[0_0_15px_rgba(16,185,129,0.35)] group-hover:scale-105 transition-transform">
-            <svg
-              className="w-4 h-4 text-black fill-black"
-              viewBox="0 0 24 24"
-              fill="currentColor"
-            >
-              <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
-            </svg>
-          </div>
-          <span className="font-['Syne',sans-serif] text-2xl font-black tracking-tight text-white group-hover:text-emerald-400 transition-colors">
-            EVOS
-          </span>
+          <EvosLogo size="sm" withSubtext={false} animated={true} />
         </button>
 
         {/* Center Navigation Links */}

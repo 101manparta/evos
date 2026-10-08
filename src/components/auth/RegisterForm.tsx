@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { ArrowRight, Lock, Mail, Building, User, ArrowLeft, RefreshCw, AlertCircle } from 'lucide-react';
 import { GlassCard } from '../ui/GlassCard';
 import { useAuth } from '../../context/AuthContext';
+import { EvosLogo } from '../brand/EvosLogo';
 
 interface RegisterFormProps {
   onRegisterSuccess: () => void;
@@ -66,12 +67,9 @@ export const RegisterForm: React.FC<RegisterFormProps> = ({
         </button>
 
         <GlassCard className="p-8 space-y-6 border-white/[0.1] shadow-2xl">
-          <div className="text-center space-y-2">
-            <div className="inline-flex items-center gap-2 mb-1">
-              <span className="font-['Syne',sans-serif] text-2xl font-bold tracking-tight text-white">
-                EVOS
-              </span>
-              <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
+          <div className="text-center space-y-3">
+            <div className="flex justify-center mb-1">
+              <EvosLogo variant="badge" size="lg" withText={false} animated={true} glow="high" />
             </div>
             <h2 className="text-xl font-bold text-white tracking-tight">
               Create Enterprise Account

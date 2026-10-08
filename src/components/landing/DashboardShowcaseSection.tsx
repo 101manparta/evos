@@ -1,6 +1,7 @@
 import React from 'react';
 import { CheckCircle2, TrendingUp, TrendingDown, Battery, ArrowUpRight, Zap, Car } from 'lucide-react';
 import { GlassCard } from '../ui/GlassCard';
+import { EvosLogo } from '../brand/EvosLogo';
 
 export const DashboardShowcaseSection: React.FC<{ onLaunchConsole: () => void }> = ({ onLaunchConsole }) => {
   return (
@@ -13,12 +14,7 @@ export const DashboardShowcaseSection: React.FC<{ onLaunchConsole: () => void }>
             <div className="rounded-3xl bg-[#090D14] border border-white/[0.12] p-5 sm:p-6 shadow-2xl space-y-5">
               {/* Header inside mockup */}
               <div className="flex items-center justify-between border-b border-white/[0.06] pb-3">
-                <div className="flex items-center gap-2">
-                  <div className="w-5 h-5 rounded-md bg-emerald-400 flex items-center justify-center text-black">
-                    <Zap className="w-3 h-3 fill-black text-black" />
-                  </div>
-                  <span className="font-['Syne',sans-serif] font-bold text-white text-xs">EVOS</span>
-                </div>
+                <EvosLogo variant="horizontal" size="xs" withSubtext={false} animated={true} />
                 <div className="flex items-center gap-2 text-slate-400">
                   <div className="w-6 h-6 rounded-full bg-white/[0.05] border border-white/[0.1] flex items-center justify-center text-[10px]">
                     B
@@ -174,8 +170,8 @@ export const DashboardShowcaseSection: React.FC<{ onLaunchConsole: () => void }>
 
           {/* Right Column: Copy & Checklist matching reference */}
           <div className="lg:col-span-5 space-y-6">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-medium">
-              <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-medium shadow-[0_0_15px_rgba(16,185,129,0.15)]">
+              <EvosLogo variant="icon" size="xs" animated={true} />
               <span>All-in-One Dashboard</span>
             </div>
 

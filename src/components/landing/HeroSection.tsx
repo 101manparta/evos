@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { ArrowRight, Play, Battery, TrendingDown, CarFront, Zap, Eye } from 'lucide-react';
 import { VehicleCanvas } from '../3d/VehicleCanvas';
+import { EvosLogo } from '../brand/EvosLogo';
 
 interface HeroSectionProps {
   onGetStarted: () => void;
@@ -21,9 +22,9 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onGetStarted, onExplor
           {/* Left Column: Typography & Action Buttons */}
           <div className="lg:col-span-6 space-y-6">
             {/* Small Top Pill Badge */}
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-medium">
-              <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-              <span>EV Fleet Management SaaS</span>
+            <div className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-medium shadow-[0_0_15px_rgba(16,185,129,0.15)]">
+              <EvosLogo variant="icon" size="xs" animated={true} />
+              <span>EV Fleet Cost Intelligence Platform</span>
             </div>
 
             {/* Main Headline matching reference */}

@@ -1,5 +1,6 @@
 import React from 'react';
-import { Instagram, Linkedin, Youtube, Zap } from 'lucide-react';
+import { Instagram, Linkedin, Youtube } from 'lucide-react';
+import { EvosLogo } from '../brand/EvosLogo';
 
 interface FooterProps {
   onNavigate: (path: string) => void;
@@ -12,15 +13,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
         <div className="flex flex-col md:flex-row items-center justify-between gap-8">
           {/* Left: EVOS Brand with tagline */}
           <div className="flex items-center gap-3">
-            <div className="w-7 h-7 rounded-lg bg-emerald-400 flex items-center justify-center text-black shadow-[0_0_12px_rgba(16,185,129,0.3)]">
-              <Zap className="w-4 h-4 fill-black text-black" />
-            </div>
-            <div>
-              <span className="font-['Syne',sans-serif] text-lg font-bold text-white block leading-tight">
-                EVOS
-              </span>
-              <span className="text-[11px] text-slate-400">Clean Energy, Smart Business.</span>
-            </div>
+            <EvosLogo size="sm" withSubtext={true} animated={true} />
           </div>
 
           {/* Center: Navigation Links */}

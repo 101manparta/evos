@@ -1,5 +1,6 @@
 import React from 'react';
 import { ArrowRight, Play, Leaf, TrendingUp } from 'lucide-react';
+import { EvosLogo } from '../brand/EvosLogo';
 
 interface CoastalCtaBannerProps {
   onGetStarted: () => void;
@@ -27,8 +28,8 @@ export const CoastalCtaBanner: React.FC<CoastalCtaBannerProps> = ({ onGetStarted
           <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             {/* Left Content */}
             <div className="lg:col-span-8 space-y-5">
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-medium">
-                <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+              <div className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-medium shadow-[0_0_15px_rgba(16,185,129,0.15)]">
+                <EvosLogo variant="icon" size="xs" animated={true} />
                 <span>Bersama Menuju Mobilitas Berkelanjutan</span>
               </div>
 
